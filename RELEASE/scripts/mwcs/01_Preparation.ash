@@ -65,15 +65,16 @@ if (get_property("_daycareGymScavenges") == "0")
 }
 
 use(1, $item[bird-a-day calendar]);
-visit_url('place.php?whichplace=chateau&action=chateau_desk2');
-print('Done Juice Bar', 'green');
+visit_url('place.php?whichplace=chateau&action=chateau_desk1');
+print('Done Piggy Bank', 'green');
 
 cli_execute('fallguy send the sleazy back alley');
 
 if (!have_skill($skill[Psychogeologist]))
 {
+    cli_execute('set choiceAdventure1494 = 1');
     use(1,$item[S.I.T. Course Completion Certificate]);
-    run_choice(1);
+    cli_execute('set choiceAdventure1494 = 0');
 }
 
 cli_execute('mcd 11');
@@ -105,94 +106,29 @@ cli_execute('familiar exotic parrot; equip familiar tiny stillsuit; familiar obt
 buy(1, $item[toy accordion]);
 
 cli_execute('terminal educate digitize.edu');
-
-
+cli_execute('terminal educate turbo');
+cli_execute('terminal enquiry familiar');
 
 //Guzzlr
 
-//terminal educate digitize
-//terminal educate turbo
-//terminal enquiry familiar
+//fight sausage goblin (weaksauce, noodles, romantic arrow, digitize, micrometeorite, attack, repeat) in haunted pantry (1)
+//equip familiar scrapbook
+//use mayday
+//bust icewoman (noodles, shoot x3, trap)
 
-//fight sausage goblin (noodles, romantic arrow, digitize, wham)
-//bust icewoman
 
 //map an amateur ninja and freekill (sets digitize and romantic arrow)
-
+//check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the Dire Warren
 //coil wire
-
-    //Digitize and Arrow a Witchess Bishop
-
-/*
-    visit_url("campground.php?action=witchess");
-    run_choice(1);
-    visit_url("choice.php?option=1&pwd="+my_hash()+"&whichchoice=1182&piece=1942", false);
-    run_combat();
-    visit_url('place.php?whichplace=chateau&action=chateau_restbox');
-    use_familiar(DefaultFamiliar());
-    equip($item[Kramco Sausage-o-Matic&trade;]);
-    adv1($location[The Haunted Pantry], -1, "");
-    equip($item[latte lovers member's mug]); //'
-    location ghostLocation = to_location(get_property("ghostLocation"));
-    adv1(ghostLocation, -1, "skill Entangling Noodles; while hasskill Shoot Ghost; skill Shoot Ghost; if hasskill Trap Ghost; skill Trap Ghost; endif; endwhile;");
-    
-    use(3, $item[psychokinetic energy blob]);
-    c2t_cartographyHunt($location[The Haiku Dungeon], $monster[amateur ninja]);
-    
-    if(get_property("_voteFreeFights") < 3 && (total_turns_played() % 11) == 1 && get_property("lastVoteMonsterTurn") < total_turns_played())
-    {
-        equip($slot[acc3], votedSticker);
-		adv1($location[The Haunted Kitchen], -1, "skill saucegeyser;");
-    }
-    
+//check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the Dire Warren
+//Summon Spaghetti Elemental
+//digitized goblin (weaksauce, noodles, micrometeorite, attack, repeat) in haunted pantry (2)
+//open the bakery
+//bust bakery (noodles, shoot x3, trap)
+//kramco golbin (weaksauce, noodles, micrometeorite, attack, repeat) in haunted pantry (3)
 
 
 
-    // QUEST - Coil Wire
-    do_test(TEST_COIL_WIRE);
-    if (my_turncount() < 60) error('Something went wrong coiling wire.');
 
-    if(get_property("questM25Armorer") == "unstarted") 
-    {
-        visit_url("shop.php?whichshop=armory&action=talk");
-        run_choice(1);
-    }
-    use_familiar(DefaultFamiliar());
-    adv1($location[The Haunted Pantry], -1, "");
-
-    cli_execute('terminal educate extract.edu');
-    cli_execute('terminal educate duplicate.edu');
-
-    ghostLocation = to_location(get_property("ghostLocation"));
-    use_familiar(DefaultFamiliar());
-    adv1(ghostLocation, -1, "skill Entangling Noodles; while hasskill Shoot Ghost; skill Shoot Ghost; if hasskill Trap Ghost; skill Trap Ghost; endif; endwhile;");
-    use_familiar(DefaultFamiliar());
-    adv1($location[The Haunted Pantry], -1, "");
-
-    //if(available_amount($item[burning newspaper]) > 0)
-    
-
-    if(get_property("_voteFreeFights") < 3 && (total_turns_played() % 11) == 1 && get_property("lastVoteMonsterTurn") < total_turns_played())
-    {
-        use_familiar(DefaultFamiliar());
-        equip($slot[acc3], votedSticker);
-		adv1($location[The Haunted Pantry], -1, "skill saucegeyser;");
-    }
-
-    equip($slot[acc3], $item[backup camera]);
-    use_familiar($familiar[Shorter-Order Cook]);
-    while(get_property('_backUpUses').to_int() < 5)
-    {
-        if(available_amount($item[short stack of pancakes]) > 0)
-            use_familiar(DefaultFamiliar());
-        adv1($location[The Dire Warren], -1, "skill Back-Up to your Last Enemy; skill candyblast; attack with weapon;");
-    }
-    while(get_property('_backUpUses').to_int() < 11)
-    {
-        if(available_amount($item[short stack of pancakes]) > 0)
-            use_familiar(DefaultFamiliar());
-        adv1($location[The Haunted Kitchen], -1, "skill Back-Up to your Last Enemy; skill candyblast; attack with weapon;");
-    }
-*/
 
 print('Exiting Preparation: ', 'purple');
