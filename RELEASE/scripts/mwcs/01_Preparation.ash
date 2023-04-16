@@ -38,15 +38,16 @@ use(1, $item[borrowed time]);
 
 //Get some adventures
 if (my_level() == 1 && my_spleen_use() == 0) {
-    while (get_property_int('_universeCalculated') < get_property_int('skillLevel144')) {
+    while (get_property('_universeCalculated').to_int() < get_property('skillLevel144').to_int()) 
+    {
         cli_execute('numberology 69');
     }
 }
 
-if (get_property_int('_clanFortuneConsultUses') < 3) 
+if (get_property('_clanFortuneConsultUses').to_int() < 3) 
 {
     cli_execute('/whitelist bonus adv');
-    while (get_property_int('_clanFortuneConsultUses') < 3) 
+    while (get_property('_clanFortuneConsultUses').to_int() < 3) 
     {
         cli_execute('fortune cheesefax');
         cli_execute('wait 5');
@@ -69,11 +70,11 @@ print('Done Juice Bar', 'green');
 
 cli_execute('fallguy send the sleazy back alley');
 
-if (!have_skill($skill[Psychogeologist])){
-		use(1,$item[S.I.T. Course Completion Certificate]);
-		run_choice(1);
-		return;
-	}
+if (!have_skill($skill[Psychogeologist]))
+{
+    use(1,$item[S.I.T. Course Completion Certificate]);
+    run_choice(1);
+}
 
 cli_execute('mcd 11');
 
