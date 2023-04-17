@@ -1,8 +1,16 @@
 print('Entering Preparation: ', 'purple');
 
+/*
+string macro = "if monsterid 2009; attack; repeat; endif; if monsterid 2010; skill saucegeyser; repeat; endif; if monsterid 2011; attack; endif; abort;";
+adv1($location[tunnel of L.O.V.E], -1, macro);
+*/
+
 //Declarations
 
 item votedSticker = to_item("&quot;I Voted!&quot; sticker");
+item kgbBriefcase = $item[kremlin's greatest briefcase]; //'
+item kramco = $item[Kramco Sausage-o-Matic&trade;];
+
 
 //Set up
 
@@ -63,6 +71,7 @@ if (get_property("_daycareGymScavenges") == "0")
     run_choice(3);
     run_choice(2);
 }
+//Daydream
 
 use(1, $item[bird-a-day calendar]);
 visit_url('place.php?whichplace=chateau&action=chateau_desk1');
@@ -95,8 +104,9 @@ equip($item[Daylight Shavings Helmet]);
 equip($slot[back], $item[protonic accelerator pack]);
 equip($slot[shirt], $item[Jurassic Parka]);
 equip($item[Fourth of May Cosplay Saber]);
+equip($slot[off-hand], kramco);
 equip($item[Cargo Cultist Shorts]);
-equip($slot[acc1], $item[kremlin's greatest briefcase]); //'
+equip($slot[acc1], kgbBriefcase); 
 equip($slot[acc2], $item[Powerful Glove]);
 equip($slot[acc3], $item[Retrospecs]);
 
@@ -109,14 +119,19 @@ cli_execute('terminal educate digitize.edu');
 cli_execute('terminal educate turbo');
 cli_execute('terminal enquiry familiar');
 
-//Guzzlr
-
 //fight sausage goblin (weaksauce, noodles, romantic arrow, digitize, micrometeorite, attack, repeat) in haunted pantry (1)
 //equip familiar scrapbook
-//use mayday
+string macro = "skill curse of weaksauce; skill entangling noodles; skill 7108; skill digitize; skill micrometeorite; attack; repeat;";
+adv1($location[the haunted pantry], -1, macro);
+
+equip($slot[off-hand], $item[familiar scrapbook]);
+
+
+
+
+
+
 //bust icewoman (noodles, shoot x3, trap)
-
-
 //map an amateur ninja and freekill (sets digitize and romantic arrow)
 //check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the Dire Warren
 //coil wire
