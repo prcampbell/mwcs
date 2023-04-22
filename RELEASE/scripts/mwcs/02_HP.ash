@@ -5,15 +5,17 @@ print('Entering HP: ', 'purple');
 //LOV tunnel (mainstat +exp, open heart surgery, chocolate) (giant growth, wolf form,)
 //use bag o tricks
 
-//map a goblin flapper in
-//Oliver's Place combat (Envy)
-
 //buff up for leveling
 //pillkeeper familiar
 
+//map a goblin flapper in
+//Oliver's Place combat (Envy)
+
+
+
 //Oliver's Place x2
 //GodLobster x2 (prep for -combat)
-//Shadow Rifts
+//Shadow Rifts -> Lodestone -> Fountain
 
 //Evoke Horror
 

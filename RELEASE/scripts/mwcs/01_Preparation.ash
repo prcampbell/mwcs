@@ -1,3 +1,5 @@
+import "mwcslib.ash"
+
 print('Entering Preparation: ', 'purple');
 
 /*
@@ -110,7 +112,7 @@ equip($slot[acc1], kgbBriefcase);
 equip($slot[acc2], $item[Powerful Glove]);
 equip($slot[acc3], $item[Retrospecs]);
 
-cli_execute('familiar exotic parrot; equip familiar tiny stillsuit; familiar obtuse angel; equip familiar miniature crystal ball;');
+cli_execute('familiar exotic parrot; equip familiar tiny stillsuit; familiar obtuse angel; equip familiar miniature crystal ball;parka mp;');
 
 // Buy toy accordion
 buy(1, $item[toy accordion]);
@@ -119,28 +121,33 @@ cli_execute('terminal educate digitize.edu');
 cli_execute('terminal educate turbo');
 cli_execute('terminal enquiry familiar');
 
-//fight sausage goblin (weaksauce, noodles, romantic arrow, digitize, micrometeorite, attack, repeat) in haunted pantry (1)
-//equip familiar scrapbook
+//fight sausage goblin in haunted pantry (1)
 string macro = "skill curse of weaksauce; skill entangling noodles; skill 7108; skill digitize; skill micrometeorite; attack; repeat;";
 adv1($location[the haunted pantry], -1, macro);
 
 equip($slot[off-hand], $item[familiar scrapbook]);
 
+cli_execute('familiar garbage fire');
 
+macro = "skill entangling noodles; skill shoot ghost;skill shoot ghost;skill shoot ghost;skill trap ghost;";
+adv1($location[the haunted kitchen], -1, macro);
 
+use(2,$item[ghostly ectoplasm]);
 
-
-
-//bust icewoman (noodles, shoot x3, trap)
 //map an amateur ninja and freekill (sets digitize and romantic arrow)
-//check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the Dire Warren
+cli_execute('parka dilophosaur; autoattack Spit jurassic acid;');
+mwcs_cartographyHunt($location[The Haiku Dungeon], $monster[amateur ninja]);
+
+
+//check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the noob cave
 //coil wire
-//check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the Dire Warren
+//check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the noob cave
+
 //Summon Spaghetti Elemental
 //digitized goblin (weaksauce, noodles, micrometeorite, attack, repeat) in haunted pantry (2)
 //open the bakery
 //bust bakery (noodles, shoot x3, trap)
-//kramco golbin (weaksauce, noodles, micrometeorite, attack, repeat) in haunted pantry (3)
+//romantic goblin (weaksauce, noodles, micrometeorite, attack, repeat) in haunted pantry (3)
 
 
 
