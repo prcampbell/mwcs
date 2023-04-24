@@ -2,8 +2,10 @@ print('Entering HP: ', 'purple');
 
 //pull bag o tricks
 //cheat forest
-//LOV tunnel (mainstat +exp, open heart surgery, chocolate) (giant growth, wolf form,)
+//One Oliver's Place Combat(giant growth, wolf form,)
 //use bag o tricks
+//LOV tunnel (mainstat +exp, open heart surgery, chocolate) 
+
 
 //buff up for leveling
 //pillkeeper familiar

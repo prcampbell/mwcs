@@ -16,9 +16,12 @@ item kramco = $item[Kramco Sausage-o-Matic&trade;];
 
 //Set up
 
+//Make sure auto attack is disabled
+cli_execute('autoattack 0');
+
 // Don't buy stuff from NPC stores.
-set_property('_saved_autoSatisfyWithNPCs', get_property('autoSatisfyWithNPCs'));
-set_property('autoSatisfyWithNPCs', 'false');
+// set_property('_saved_autoSatisfyWithNPCs', get_property('autoSatisfyWithNPCs'));
+// set_property('autoSatisfyWithNPCs', 'false');
 
 // Do buy stuff from coinmasters (hermit).
 set_property('_saved_autoSatisfyWithCoinmasters', get_property('autoSatisfyWithCoinmasters'));
@@ -132,11 +135,10 @@ cli_execute('familiar garbage fire');
 macro = "skill entangling noodles; skill shoot ghost;skill shoot ghost;skill shoot ghost;skill trap ghost;";
 adv1($location[the haunted kitchen], -1, macro);
 
-use(2,$item[ghostly ectoplasm]);
-
 //map an amateur ninja and freekill (sets digitize and romantic arrow)
 cli_execute('parka dilophosaur; autoattack Spit jurassic acid;');
 mwcs_cartographyHunt($location[The Haiku Dungeon], $monster[amateur ninja]);
+cli_execute('autoattack 0');
 
 
 //check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the noob cave
