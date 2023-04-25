@@ -9,19 +9,6 @@ adv1($location[tunnel of L.O.V.E], -1, macro);
 
 //Declarations
 
-int TEST_HP = 1;
-int TEST_MUS = 2;
-int TEST_MYS = 3;
-int TEST_MOX = 4;
-int TEST_FAMILIAR = 5;
-int TEST_WEAPON = 6;
-int TEST_SPELL = 7;
-int TEST_NONCOMBAT = 8;
-int TEST_ITEM = 9;
-int TEST_HOT_RES = 10;
-int TEST_COIL_WIRE = 11;
-int TEST_DONATE = 30;
-
 item votedSticker = to_item("&quot;I Voted!&quot; sticker");
 item kgbBriefcase = $item[kremlin's greatest briefcase]; //'
 item kramco = $item[Kramco Sausage-o-Matic&trade;];
@@ -159,7 +146,7 @@ cli_execute('autoattack 0');
 
 //check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the noob cave
 do_test(TEST_COIL_WIRE);
-cast(1, $skill[summon Spaghetti Elemental]);
+cast(1, $skill[Bind Spaghetti Elemental]);
 
 //check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the noob cave
 //digitized goblin (weaksauce, noodles, micrometeorite, attack, repeat) in haunted pantry (2)
