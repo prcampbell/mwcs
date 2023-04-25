@@ -146,7 +146,7 @@ cli_execute('autoattack 0');
 
 //check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the noob cave
 do_test(TEST_COIL_WIRE);
-cast(1, $skill[Bind Spaghetti Elemental]);
+use_skill(1, $skill[Bind Spaghetti Elemental]);
 
 //check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the noob cave
 //digitized goblin (weaksauce, noodles, micrometeorite, attack, repeat) in haunted pantry (2)
