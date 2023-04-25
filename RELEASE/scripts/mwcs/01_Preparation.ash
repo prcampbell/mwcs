@@ -35,6 +35,9 @@ cli_execute('mood apathetic');
 //set the backup camera reverser
 cli_execute('backupcamera reverser on');
 
+//rent a dark horse
+cli_execute('horsery dark');
+
 // Upgrade Saber to Familiar weight
 visit_url('main.php?action=may4');
 run_choice(4);
