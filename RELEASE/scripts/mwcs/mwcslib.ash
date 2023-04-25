@@ -14,6 +14,29 @@ int TEST_COIL_WIRE = 11;
 
 /*Helper Functions*/
 
+boolean test_done(int test_num) 
+{
+    print('Checking test ' + test_num + '...');
+    string text = visit_url('council.php');
+    return !text.contains_text('<input type=hidden name=option value=' + test_num + '>');
+}
+
+void do_test(int test_num) 
+{
+    if (!test_done(test_num)) 
+    {
+        visit_url('choice.php?whichchoice=1089&option=' + test_num);
+        if (!test_done(test_num)) 
+        {
+            print('Failed to do test ' + test_num + '. Maybe we are out of turns.', 'red');
+        }
+    } 
+    else 
+    {
+        print('Test ' + test_num + ' already completed.');
+    }
+}
+
 boolean mwcs_cartographyHunt(location loc,monster mon) 
 {
     if (have_skill($skill[Map the Monsters]) && get_property('mappingMonsters') == 'false' && get_property('_monstersMapped').to_int() < 3)
