@@ -1,19 +1,9 @@
 print('Entering HP: ', 'purple');
 
-//pull bag o tricks
-//cheat forest
-//One Oliver's Place Combat(giant growth, wolf form,)
-//use bag o tricks
 //LOV tunnel (mainstat +exp, open heart surgery, chocolate) 
-
-
-//buff up for leveling
-//pillkeeper familiar
 
 //map a goblin flapper in
 //Oliver's Place combat (Envy)
-
-
 
 //Oliver's Place x2
 //GodLobster x2 (prep for -combat)
@@ -21,12 +11,15 @@ print('Entering HP: ', 'purple');
 
 //Evoke Horror
 
-//equip +exp
-
-//10% bonus, Bastille
+//equip makeshift shirt
 
 //buff famweight, equip makeshift shirt
 //kramco chain
+
+//equip +exp
+//10% bonus, Bastille, free rests
+
+//Backup in NEP
 
 //NEP + 3 Chest X-Ray bowl sidewasy pride
 
