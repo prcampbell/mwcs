@@ -1,5 +1,8 @@
 print('Entering HP: ', 'purple');
 
+
+cli_execute('familiar melodramedary; make box of familiar jacks; use box of familiar jacks; equip drinking helm');
+//buff up
 //LOV tunnel (mainstat +exp, open heart surgery, chocolate) 
 
 //map a goblin flapper in

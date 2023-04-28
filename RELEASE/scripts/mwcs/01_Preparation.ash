@@ -153,7 +153,7 @@ cli_execute('pillkeeper familiar; pull bag o tricks; cheat forest;');
 //digitized goblin (weaksauce, noodles, micrometeorite, Giant Growth, attack, repeat) in haunted pantry (2)
 macro = "skill curse of weaksauce; skill entangling noodles; skill Giant Growth; skill micrometeorite; attack; repeat;";
 adv1($location[the haunted pantry], -1, macro);
-cli_execute('fallguy send noob cave');
+cli_execute('fallguy send noob cave; use bag o tricks;');
 
 //romantic goblin (weaksauce, noodles, micrometeorite, attack, repeat) in haunted pantry (3)
 macro = "skill curse of weaksauce; skill entangling noodles; skill micrometeorite; attack; repeat;";
