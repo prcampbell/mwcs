@@ -160,7 +160,14 @@ macro = "skill curse of weaksauce; skill entangling noodles; skill micrometeorit
 adv1($location[the haunted pantry], -1, macro);
 
 //open the bakery
+if(get_property("questM25Armorer") == "unstarted") 
+{
+    visit_url("shop.php?whichshop=armory&action=talk");
+    run_choice(1);
+}
 //bust bakery (noodles, shoot x3, trap)
+macro = "skill entangling noodles; skill shoot ghost;skill shoot ghost;skill shoot ghost;skill trap ghost;";
+adv1($location[Madness Bakery], -1, macro);
 //check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the noob cave
 
 
