@@ -1,3 +1,4 @@
+import "mwcslib.ash"
 print('Entering HP: ', 'purple');
 
 
@@ -64,7 +65,7 @@ Exp Buffs
 
 */
 
-item love_potion = $item[Love Potion #0];
+item love_potion = $item[Love Potion #XYZ];
     effect love_effect = $effect[Tainted Love Potion];
     if (have_effect(love_effect) == 0) {
         if (available_amount(love_potion) == 0) {
