@@ -145,6 +145,7 @@ cli_execute('autoattack 0');
 
 
 //check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the noob cave
+use_skill(1, $skill[Blood Sugar Sauce Magic]);
 do_test(TEST_COIL_WIRE);
 use_skill(1, $skill[Bind Spaghetti Elemental]);
 use_skill(1, $skill[Ruthless Efficiency]);
