@@ -55,3 +55,17 @@ boolean mwcs_cartographyHunt(location loc,monster mon)
     }
     return false;
 }
+
+void ensure_effect(effect ef, int turns) {
+    if (have_effect(ef) < turns) {
+        if (!cli_execute(ef.default) || have_effect(ef) == 0) {
+            error('Failed to get effect ' + ef.name + '.');
+        }
+    } else {
+        print('Already have effect ' + ef.name + '.');
+    }
+}
+
+void ensure_effect(effect ef) {
+    ensure_effect(ef, 1);
+}
