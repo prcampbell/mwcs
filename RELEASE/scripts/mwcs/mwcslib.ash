@@ -14,6 +14,13 @@ int TEST_COIL_WIRE = 11;
 
 /*Helper Functions*/
 
+void error(string message) {
+    // Clean up saved properties.
+    //set_property('autoSatisfyWithNPCs', get_property('_saved_autoSatisfyWithNPCs'));
+    //set_property('autoSatisfyWithCoinmasters', get_property('_saved_autoSatisfyWithCoinmasters'));
+    abort(message);
+}
+
 boolean test_done(int test_num) 
 {
     print('Checking test ' + test_num + '...');
