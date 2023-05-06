@@ -145,17 +145,28 @@ cli_execute('autoattack 0');
 
 
 //check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the noob cave
+if(get_property("_voteFreeFights") < 3 && (total_turns_played() % 11) == 1 && get_property("lastVoteMonsterTurn") < total_turns_played())
+{
+    //abort !monsterid 2095 && !monsterid 2096 && !monsterid 2097 && !monsterid 2098
+    equip($slot[acc3], votedSticker);
+    adv1($location[The Haunted Kitchen], -1, "abort !monsterid 2095 && !monsterid 2096 && !monsterid 2097 && !monsterid 2098;skill saucegeyser;");
+} 
+
 use_skill(1, $skill[Blood Sugar Sauce Magic]);
 do_test(TEST_COIL_WIRE);
 use_skill(1, $skill[Bind Spaghetti Elemental]);
-use_skill(1, $skill[Ruthless Efficiency]);
 cli_execute('pillkeeper familiar; pull bag o tricks; cheat forest;');
 
 //digitized goblin (weaksauce, noodles, micrometeorite, Giant Growth, attack, repeat) in haunted pantry (2)
 macro = "skill curse of weaksauce; skill entangling noodles; skill Giant Growth; skill micrometeorite; attack; repeat;";
 adv1($location[the haunted pantry], -1, macro);
+
+//Get Rufus quest before extending buffs
+cli_execute('set choiceAdventure1497 = 2');
+use(1, $item[closed-circuit pay phone]);
 cli_execute('fallguy send noob cave; use bag o tricks;');
 
+use_skill(1, $skill[Ruthless Efficiency]);
 //romantic goblin (weaksauce, noodles, micrometeorite, attack, repeat) in haunted pantry (3)
 macro = "skill curse of weaksauce; skill entangling noodles; skill micrometeorite; attack; repeat;";
 adv1($location[the haunted pantry], -1, macro);
@@ -170,6 +181,10 @@ if(get_property("questM25Armorer") == "unstarted")
 macro = "skill entangling noodles; skill shoot ghost;skill shoot ghost;skill shoot ghost;skill trap ghost;";
 adv1($location[Madness Bakery], -1, macro);
 //check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the noob cave
-
+if(get_property("_voteFreeFights") < 3 && (total_turns_played() % 11) == 1 && get_property("lastVoteMonsterTurn") < total_turns_played())
+{
+    equip($slot[acc3], votedSticker);
+    adv1($location[The Haunted Kitchen], -1, "abort !monsterid 2095 && !monsterid 2096 && !monsterid 2097 && !monsterid 2098;skill saucegeyser;");
+}
 
 print('Exiting Preparation: ', 'purple');

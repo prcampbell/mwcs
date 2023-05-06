@@ -4,8 +4,9 @@ print('Entering HP: ', 'purple');
 
 cli_execute('familiar melodramedary; make box of familiar jacks; use box of familiar jacks; equip drinking helm');
 //buff up
-cli_execute('equip powerful glove; cast triple size;');
 
+
+/*Mana-less stat buffs*/
 
 // Boxing Daycare
 ensure_effect($effect[Uncucumbered]);
@@ -32,35 +33,38 @@ if (have_effect($effect[That's Just Cloud-Talk, Man]) == 0) { //'
     visit_url('place.php?whichplace=campaway&action=campaway_sky');
 }
 
+if (!get_property_boolean('_lyleFavored')) {
+    ensure_effect($effect[Favored by Lyle]);
+}
+ensure_effect($effect[Triple-Sized]);
+
+ensure_effect($effect[Confidence of the Votive]);
+ensure_effect($effect[Broad-Spectrum Vaccine]);
+ensure_effect($effect[Feeling Excited]);
+
+cli_execute('maximize mp; eat 1 magic sausage;');
+
+//Myst Buffs
+ensure_effect($effect[Song of Bravado]);
+ensure_effect($effect[Big]);
+ensure_song($effect[The Magical Mojomuscular Melody]);
+ensure_song($effect[Stevedave's Shanty of Superiority]); //'
+
+ensure_effect($effect[Drescher's Annoying Noise]);  //'
+ensure_effect($effect[Pride of the Puffin]);
+ensure_effect($effect[Inscrutable Gaze]);
+ensure_effect($effect[Carol of the Thrills]);
+ensure_effect($effect[Blood Bond]);
+
 /*
-Myst Buffs
-    mono-rail
-
-    votive of confidence
-    spacegate vaccine 2
-    feel excitement
-    cast magical mojo muscular
-    cast blessing of she who was
-    cast manicotti meditation
-    cast sauce contemplation
-    cast Get Big
-    cast Stevedave's Shanty of Superiority
-    cast song of bravado
-    eat magic sausage
-
 Exp Buffs
-    Drescher's Annoying Noise
-    Pride of the Puffin
-    Inscrutable Gaze
     Aria
     Beachhead Learned Something Maybe
     Witchess
     Shower Lukewarm
-    Carol of the Thrills
     Antiphon
     Leash
     Empathy
-    BloodBond
     Beachhead Familiar
 
 */
@@ -79,7 +83,9 @@ item love_potion = $item[Love Potion #XYZ];
             use(1, love_potion);
         }
     }
+abort('unfinished');
 
+//macro = 'use curse of weaksauce;use micrometeorite;use detect weakness;use time-spinner;use entangling noodles;'
 //LOV tunnel (mainstat +exp, open heart surgery, chocolate) 
 
 //map a goblin flapper in

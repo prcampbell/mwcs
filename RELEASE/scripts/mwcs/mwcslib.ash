@@ -76,3 +76,30 @@ void ensure_effect(effect ef, int turns) {
 void ensure_effect(effect ef) {
     ensure_effect(ef, 1);
 }
+
+boolean[effect] song_slot_3 = $effects[Power Ballad of the Arrowsmith, The Magical Mojomuscular Melody, The Moxious Madrigal, Ode to Booze, Jackasses' Symphony of Destruction];
+boolean[effect] song_slot_4 = $effects[Carlweather's Cantata of Confrontation, The Sonata of Sneakiness, Polka of Plenty];
+void open_song_slot(effect song) 
+{
+    if(have_effect(song) == 0)
+    {
+        boolean[effect] song_slot;
+        if (song_slot_3 contains song) song_slot = song_slot_3;
+        else if (song_slot_4 contains song) song_slot = song_slot_4;
+        foreach shruggable in song_slot {
+            shrug(shruggable);
+        }
+    }
+    
+}
+
+void ensure_song(effect ef) {
+    if (have_effect(ef) == 0) {
+        open_song_slot(ef);
+        if (!cli_execute(ef.default) || have_effect(ef) == 0) {
+            error('Failed to get effect ' + ef.name + '.');
+        }
+    } else {
+        print('Already have effect ' + ef.name + '.');
+    }
+}
