@@ -28,6 +28,7 @@ get_property("telescopeLookedHigh") == "false") cli_execute("telescope high");
 cli_execute("crossstreams");
 
 ensure_effect($effect[We're All Made of Starfish]); //'
+ensure_effect($effect[You Learned Something Maybe!]); //'
 
 if (have_effect($effect[That's Just Cloud-Talk, Man]) == 0) { //'
     visit_url('place.php?whichplace=campaway&action=campaway_sky');
@@ -55,18 +56,15 @@ ensure_effect($effect[Pride of the Puffin]);
 ensure_effect($effect[Inscrutable Gaze]);
 ensure_effect($effect[Carol of the Thrills]);
 ensure_effect($effect[Blood Bond]);
+ensure_effect($effect[Empathy of the Newt]);
+ensure_effect($effect[Leash of Linguini]);
+ensure_effect($effect[Antiphon of Aptitude]);
+
+
 
 /*
 Exp Buffs
-    Aria
-    Beachhead Learned Something Maybe
     Witchess
-    Shower Lukewarm
-    Antiphon
-    Leash
-    Empathy
-    Beachhead Familiar
-
 */
 
 item love_potion = $item[Love Potion #XYZ];
