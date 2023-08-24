@@ -87,7 +87,7 @@ void open_song_slot(effect song)
         if (song_slot_3 contains song) song_slot = song_slot_3;
         else if (song_slot_4 contains song) song_slot = song_slot_4;
         foreach shruggable in song_slot {
-            shrug(shruggable);
+            cli_execute("shrug "+ shruggable.to_string());
         }
     }
     

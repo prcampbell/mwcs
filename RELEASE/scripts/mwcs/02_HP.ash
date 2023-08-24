@@ -34,7 +34,7 @@ if (have_effect($effect[That's Just Cloud-Talk, Man]) == 0) { //'
     visit_url('place.php?whichplace=campaway&action=campaway_sky');
 }
 
-if (!get_property_boolean('_lyleFavored')) {
+if (!get_property('_lyleFavored').to_boolean()) {
     ensure_effect($effect[Favored by Lyle]);
 }
 ensure_effect($effect[Triple-Sized]);
@@ -56,7 +56,7 @@ ensure_effect($effect[Pride of the Puffin]);
 ensure_effect($effect[Inscrutable Gaze]);
 ensure_effect($effect[Carol of the Thrills]);
 ensure_effect($effect[Blood Bond]);
-ensure_effect($effect[Empathy of the Newt]);
+ensure_effect($effect[Empathy]);
 ensure_effect($effect[Leash of Linguini]);
 ensure_effect($effect[Antiphon of Aptitude]);
 
