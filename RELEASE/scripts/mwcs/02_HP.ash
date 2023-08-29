@@ -59,13 +59,8 @@ ensure_effect($effect[Blood Bond]);
 ensure_effect($effect[Empathy]);
 ensure_effect($effect[Leash of Linguini]);
 ensure_effect($effect[Antiphon of Aptitude]);
-
-
-
-/*
-Exp Buffs
-    Witchess
-*/
+ensure_effect($effect[Ur-Kel's Aria of Annoyance]);
+cli_execute('witchess');
 
 item love_potion = $item[Love Potion #XYZ];
     effect love_effect = $effect[Tainted Love Potion];
@@ -81,10 +76,39 @@ item love_potion = $item[Love Potion #XYZ];
             use(1, love_potion);
         }
     }
-abort('unfinished');
 
-//macro = 'use curse of weaksauce;use micrometeorite;use detect weakness;use time-spinner;use entangling noodles;'
+
+
+// Get dressed to beat things up
+equip($item[Daylight Shavings Helmet]);
+equip($slot[back], $item[unwrapped knock-off retro superhero cape]);
+equip($slot[shirt], $item[Jurassic Parka]);
+cli_execute('parka ml');
+equip($item[Fourth of May Cosplay Saber]);
+equip($slot[off-hand], $item[unbreakable umbrella]);
+equip($item[designer sweatpants]);
+equip($slot[acc1],  $item[backup camera]);
+cli_execute('backupcamera ml');
+equip($slot[acc2], $item[hewn moon-rune spoon]);
+equip($slot[acc3], $item[Retrospecs]);
+
+
+//summon librams to burn mp
+
+macro = 'use curse of weaksauce;use micrometeorite;use detect weakness;use time-spinner;use entangling noodles;'
+cli_execute('set choiceAdventure1223 = 1; set choiceAdventure1224 = 2; set choiceAdventure1225 = 1; set choiceAdventure1226 = 2; set choiceAdventure1227 = 1; set choiceAdventure1228 = 3;');
+//1223 = 1
+//L.O.V. Equipment Room = 1224 (2)
+//1225 = 1
+//L.O.V. Emergency Room = 1226 (2)
+//1227 = 1
+//L.O.V. Emporium = 1228 (3)
+adv1($location[The Tunel of L.O.V.E.], -1, macro);
+
+abort('unfinished');
 //LOV tunnel (mainstat +exp, open heart surgery, chocolate) 
+
+//equip LOV epaulettes
 
 //map a goblin flapper in
 //Oliver's Place combat (Envy)
@@ -96,13 +120,15 @@ abort('unfinished');
 //Evoke Horror
 
 //equip makeshift shirt
-cli_execute('fold makeshift shirt; equip makeshift shirt;');
+cli_execute('fold makeshift shirt; equip makeshift shirt; equip familiar scrapbook');
+
+//equip +exp
+//10% bonus, Bastille, free rests
+
 
 //buff famweight, equip makeshift shirt
 //kramco chain
 
-//equip +exp
-//10% bonus, Bastille, free rests
 
 //Backup in NEP
 
