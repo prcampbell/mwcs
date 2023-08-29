@@ -95,7 +95,7 @@ equip($slot[acc3], $item[Retrospecs]);
 
 //summon librams to burn mp
 
-macro = 'use curse of weaksauce;use micrometeorite;use detect weakness;use time-spinner;use entangling noodles;'
+string macro = 'use curse of weaksauce;use micrometeorite;use detect weakness;use time-spinner;use entangling noodles;';
 cli_execute('set choiceAdventure1223 = 1; set choiceAdventure1224 = 2; set choiceAdventure1225 = 1; set choiceAdventure1226 = 2; set choiceAdventure1227 = 1; set choiceAdventure1228 = 3;');
 //1223 = 1
 //L.O.V. Equipment Room = 1224 (2)
@@ -103,7 +103,7 @@ cli_execute('set choiceAdventure1223 = 1; set choiceAdventure1224 = 2; set choic
 //L.O.V. Emergency Room = 1226 (2)
 //1227 = 1
 //L.O.V. Emporium = 1228 (3)
-adv1($location[The Tunel of L.O.V.E.], -1, macro);
+adv1($location[The Tunnel of L.O.V.E.], -1, macro);
 
 abort('unfinished');
 //LOV tunnel (mainstat +exp, open heart surgery, chocolate) 
