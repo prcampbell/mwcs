@@ -91,49 +91,56 @@ equip($slot[acc1],  $item[backup camera]);
 cli_execute('backupcamera ml');
 equip($slot[acc2], $item[hewn moon-rune spoon]);
 equip($slot[acc3], $item[Retrospecs]);
+equip($slot[familiar], $item[dromedary drinking helmet]);
 
 
 //summon librams to burn mp
 
-string macro = 'use curse of weaksauce;use micrometeorite;use detect weakness;use time-spinner;use entangling noodles;';
-//Fight Enforcer
-cli_execute('set choiceAdventure1223 = 1;');
-//Grab epaulettes
-cli_execute('set choiceAdventure1224 = 2;');
-//Fight Engineer
-cli_execute('set choiceAdventure1225 = 1;');
-//Fam weight
-cli_execute('set choiceAdventure1226 = 2;');
-//Fight Equivocator
-cli_execute('set choiceAdventure1227 = 1;');
-//Chocolate
-cli_execute('set choiceAdventure1228 = 3;');
+//string macro = 'use curse of weaksauce;use micrometeorite;use detect weakness;use time-spinner;use entangling noodles;';
 
-adv1($location[The Tunnel of L.O.V.E.], -1, macro);
+
+//adv1($location[The Tunnel of L.O.V.E.], -1, macro);
+cli_execute('autoattack MerryCS');
+visit_url("place.php?whichplace=town_wrong&action=townwrong_tunnel");
+//Fight Enforcer
+run_choice(1);
+run_combat();
+//Grab epaulettes
+run_choice(2);
+//Fight Engineer
+run_choice(1);
+run_combat();
+//Fam weight
+run_choice(2);
+//Fight Equivocator
+run_choice(1);
+run_combat();
+//Chocolate
+run_choice(3);
 
 equip($slot[back], $item[LOV Epaulettes]);
+cli_execute('autoattack 0');
 
 abort('unfinished');
 //map a goblin flapper in
 //Oliver's Place combat (Envy)
 
-//Oliver's Place x2
-//GodLobster x2 (prep for -combat)
+//Oliver's Place x2 (portscan government agents)
+
 //Shadow Rifts -> Lodestone -> Fountain
 
 //Evoke Horror
-
+//GodLobster x2 (prep for -combat)
 //equip makeshift shirt
 cli_execute('fold makeshift shirt; equip makeshift shirt; equip familiar scrapbook');
+//buff famweight, equip makeshift shirt
+// use entangling noodles; use saucy salve; use lecture on relativity; use saucegeyser; repeat;
+//kramco chain
 
 //equip +exp
 //10% bonus, Bastille, free rests
 
-
-//buff famweight, equip makeshift shirt
-//kramco chain
-
-
+//back-up to your last enemy; bowl sideways; pride; confetti; saucegeyser;
 //Backup in NEP
 
 //NEP + 3 Chest X-Ray bowl sideways pride
