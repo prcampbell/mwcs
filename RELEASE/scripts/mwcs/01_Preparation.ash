@@ -136,7 +136,7 @@ equip($slot[off-hand], $item[familiar scrapbook]);
 cli_execute('familiar garbage fire');
 
 macro = "skill entangling noodles; skill shoot ghost;skill shoot ghost;skill shoot ghost;skill trap ghost;";
-adv1($location[the haunted kitchen], -1, macro);
+adv1($location[the haunted pantry], -1, macro);
 
 //map an amateur ninja and freekill (sets digitize and romantic arrow)
 cli_execute('parka dilophosaur; autoattack Spit jurassic acid;');
@@ -147,9 +147,9 @@ cli_execute('autoattack 0');
 //check for vote monster (weaksauce, noodles, micrometeorite, attack, repeat) in the noob cave
 if(get_property("_voteFreeFights") < 3 && (total_turns_played() % 11) == 1 && get_property("lastVoteMonsterTurn") < total_turns_played())
 {
-    //abort !monsterid 2095 && !monsterid 2096 && !monsterid 2097 && !monsterid 2098
+    //abort !monsterid 2094 && !monsterid 2095 && !monsterid 2096 && !monsterid 2097 && !monsterid 2098
     equip($slot[acc3], votedSticker);
-    adv1($location[The Haunted Kitchen], -1, "abort !monsterid 2095 && !monsterid 2096 && !monsterid 2097 && !monsterid 2098;skill saucegeyser;");
+    adv1($location[The Haunted pantry], -1, "abort !monsterid 2094 && !monsterid 2095 && !monsterid 2096 && !monsterid 2097 && !monsterid 2098;skill saucegeyser;");
 } 
 
 use_skill(1, $skill[Blood Sugar Sauce Magic]);
@@ -184,7 +184,7 @@ adv1($location[Madness Bakery], -1, macro);
 if(get_property("_voteFreeFights") < 3 && (total_turns_played() % 11) == 1 && get_property("lastVoteMonsterTurn") < total_turns_played())
 {
     equip($slot[acc3], votedSticker);
-    adv1($location[The Haunted Kitchen], -1, "abort !monsterid 2095 && !monsterid 2096 && !monsterid 2097 && !monsterid 2098;skill saucegeyser;");
+    adv1($location[The Haunted Kitchen], -1, "abort !monsterid 2094 && !monsterid 2095 && !monsterid 2096 && !monsterid 2097 && !monsterid 2098;skill saucegeyser;");
 }
 
 print('Exiting Preparation: ', 'purple');
