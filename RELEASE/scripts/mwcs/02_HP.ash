@@ -102,6 +102,7 @@ equip($slot[familiar], $item[dromedary drinking helmet]);
 //adv1($location[The Tunnel of L.O.V.E.], -1, macro);
 cli_execute('autoattack MerryCS');
 visit_url("place.php?whichplace=town_wrong&action=townwrong_tunnel");
+run_choice(1);
 //Fight Enforcer
 run_choice(1);
 run_combat();
