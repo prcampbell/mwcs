@@ -95,6 +95,10 @@ equip($slot[familiar], $item[dromedary drinking helmet]);
 
 
 //summon librams to burn mp
+while(item_amount($item[bricko eye brick]) == 0 && item_amount($item[bricko ooze]) == 0)
+{
+	use_skill($skill[summon brickos]);
+}
 
 //string macro = 'use curse of weaksauce;use micrometeorite;use detect weakness;use time-spinner;use entangling noodles;';
 
@@ -129,6 +133,12 @@ abort('unfinished');
 //Oliver's Place x2 (portscan government agents)
 
 //Shadow Rifts -> Lodestone -> Fountain
+string macro = "skill stuffed mortar shell; skill saucegeyser; repeat;";
+while(have_effect($effect[shadow affinity]) > 0)
+{
+	adv1($location[Shadow Rift (The Nearby Plains)], -1, macro);
+}
+
 
 //Evoke Horror
 //GodLobster x2 (prep for -combat)

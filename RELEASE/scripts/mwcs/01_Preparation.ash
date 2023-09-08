@@ -136,7 +136,7 @@ equip($slot[off-hand], $item[familiar scrapbook]);
 cli_execute('familiar garbage fire');
 
 macro = "skill entangling noodles; skill shoot ghost;skill shoot ghost;skill shoot ghost;skill trap ghost;";
-adv1($location[the haunted pantry], -1, macro);
+adv1($location[the haunted kitchen], -1, macro);
 
 //map an amateur ninja and freekill (sets digitize and romantic arrow)
 cli_execute('parka dilophosaur; autoattack Spit jurassic acid;');
@@ -155,7 +155,11 @@ if(get_property("_voteFreeFights") < 3 && (total_turns_played() % 11) == 1 && ge
 use_skill(1, $skill[Blood Sugar Sauce Magic]);
 do_test(TEST_COIL_WIRE);
 use_skill(1, $skill[Bind Spaghetti Elemental]);
-cli_execute('pillkeeper familiar; pull bag o tricks; cheat forest;');
+if(storage_amount($item[Bag o' Tricks]) > 0 )
+{
+    take_storage(1, $item[Bag o' Tricks])
+}
+cli_execute('pillkeeper familiar; cheat forest;');
 
 //digitized goblin (weaksauce, noodles, micrometeorite, Giant Growth, attack, repeat) in haunted pantry (2)
 macro = "skill curse of weaksauce; skill entangling noodles; skill Giant Growth; skill micrometeorite; attack; repeat;";
@@ -164,7 +168,12 @@ adv1($location[the haunted pantry], -1, macro);
 //Get Rufus quest before extending buffs
 cli_execute('set choiceAdventure1497 = 2');
 use(1, $item[closed-circuit pay phone]);
-cli_execute('fallguy send noob cave; use bag o tricks;');
+cli_execute('fallguy send noob cave;');
+
+if(item_amount($item[Bag o' Tricks]) > 0 )
+{
+    use(1, $item[Bag o' Tricks]);
+}
 
 use_skill(1, $skill[Ruthless Efficiency]);
 //romantic goblin (weaksauce, noodles, micrometeorite, attack, repeat) in haunted pantry (3)
