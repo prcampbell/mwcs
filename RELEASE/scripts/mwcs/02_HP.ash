@@ -126,7 +126,7 @@ run_choice(3);
 equip($slot[back], $item[LOV Epaulettes]);
 cli_execute('autoattack 0');
 
-abort('unfinished');
+
 //map a goblin flapper in
 //Oliver's Place combat (Envy)
 
@@ -144,6 +144,8 @@ while(have_effect($effect[shadow affinity]) > 0)
 //GodLobster x2 (prep for -combat)
 //equip makeshift shirt
 cli_execute('fold makeshift shirt; equip makeshift shirt; equip familiar scrapbook');
+
+abort('unfinished');
 //buff famweight, equip makeshift shirt
 // use entangling noodles; use saucy salve; use lecture on relativity; use saucegeyser; repeat;
 //kramco chain
