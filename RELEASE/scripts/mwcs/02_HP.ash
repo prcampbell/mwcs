@@ -138,18 +138,27 @@ while(have_effect($effect[shadow affinity]) > 0)
 {
 	adv1($location[Shadow Rift (The Nearby Plains)], -1, macro);
 }
-
+if(get_property('_shadowRiftCombats').to_int() == 11)
+{
+    adv1($location[Shadow Rift (The Nearby Plains)], -1, macro);
+}
 
 //Evoke Horror
 //GodLobster x2 (prep for -combat)
 //equip makeshift shirt
-cli_execute('fold makeshift shirt; equip makeshift shirt; equip familiar scrapbook');
+cli_execute('fold makeshift shirt; equip makeshift shirt;');
+equip($slot[off-hand], $item[familiar scrapbook]);
 
 abort('unfinished');
 //buff famweight, equip makeshift shirt
 // use entangling noodles; use saucy salve; use lecture on relativity; use saucegeyser; repeat;
 //kramco chain
 
+
+while(my_mp() > mp_cost($skill[Summon Love Song]) && item_amount($item[love song of icy revenge]) < 4)
+{
+    use_skill(1, $skill[Summon Love Song]);
+}
 //equip +exp
 //10% bonus, Bastille, free rests
 
