@@ -157,7 +157,7 @@ do_test(TEST_COIL_WIRE);
 use_skill(1, $skill[Bind Spaghetti Elemental]);
 if(storage_amount($item[Bag o' Tricks]) > 0 )
 {
-    take_storage(1, $item[Bag o' Tricks])
+    take_storage(1, $item[Bag o' Tricks]);
 }
 cli_execute('pillkeeper familiar; cheat forest;');
 
