@@ -143,22 +143,32 @@ if(get_property('_shadowRiftCombats').to_int() == 11)
     adv1($location[Shadow Rift (The Nearby Plains)], -1, macro);
 }
 
-//Evoke Horror
-//GodLobster x2 (prep for -combat)
-//equip makeshift shirt
+
 cli_execute('fold makeshift shirt; equip makeshift shirt;');
-equip($slot[off-hand], $item[familiar scrapbook]);
+equip($slot[off-hand], $item[Kramco Sausage-o-Matic&trade;]);
 
-abort('unfinished');
-//buff famweight, equip makeshift shirt
-// use entangling noodles; use saucy salve; use lecture on relativity; use saucegeyser; repeat;
-//kramco chain
-
+while(my_mp() > mp_cost($skill[Summon Love Song]) && item_amount($item[green candy heart]) < 1)
+{
+    use_skill(1, $skill[Summon Candy Heart]);
+}
 
 while(my_mp() > mp_cost($skill[Summon Love Song]) && item_amount($item[love song of icy revenge]) < 4)
 {
     use_skill(1, $skill[Summon Love Song]);
 }
+
+use_familiar($familiar[pocket professor]);
+equip($slot[familiar], $item[astral pet sweater]);
+equip($slot[off-hand], $item[Kramco Sausage-o-Matic&trade;]);
+
+cli_execute('autoattack BasicProfChain');
+adv1($location[The Neverending Party], -1, '');
+
+abort('unfinished');
+
+// use entangling noodles; use saucy salve; use lecture on relativity; use saucegeyser; repeat;
+//kramco chain
+
 //equip +exp
 //10% bonus, Bastille, free rests
 
@@ -172,5 +182,25 @@ while(my_mp() > mp_cost($skill[Summon Love Song]) && item_amount($item[love song
 //Witchess Queen
 
 //Machine Tunnels for Certainty and Joy
+
+while (get_property('timesRested').to_int() < total_free_rests()) 
+{
+    visit_url('place.php?whichplace=chateau&action=chateau_restbox');
+    while(my_mp() > mp_cost($skill[Summon Love Song]) && item_amount($item[love song of icy revenge]) < 4)
+    {
+        use_skill(1, $skill[Summon Love Song]);
+    }
+    while(my_mp() > mp_cost($skill[Summon Love Song]) && item_amount($item[pulled blue taffy]) < 5)
+    {
+        use_skill(1, $skill[Summon taffy]);
+    }
+}
+
+cli_execute('autoattack BasicBackup');
+
+while(get_property('camelSpit').to_int() < 100)
+{
+	adv1($location[The Neverending Party], -1, '');
+}
 
 print('Exiting HP: ', 'purple');
