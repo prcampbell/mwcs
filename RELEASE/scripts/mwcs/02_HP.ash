@@ -163,6 +163,7 @@ equip($slot[off-hand], $item[Kramco Sausage-o-Matic&trade;]);
 
 cli_execute('autoattack BasicProfChain');
 adv1($location[The Neverending Party], -1, '');
+cli_execute('autoattack 0');
 
 abort('unfinished');
 
