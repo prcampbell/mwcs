@@ -157,12 +157,47 @@ while(my_mp() > mp_cost($skill[Summon Love Song]) && item_amount($item[love song
     use_skill(1, $skill[Summon Love Song]);
 }
 
+if(get_property('_questPartyFair') == 'unstarted')
+{
+    adv1($location[The Neverending Party], -1, '');
+}
+
 use_familiar($familiar[pocket professor]);
 equip($slot[familiar], $item[astral pet sweater]);
 equip($slot[off-hand], $item[Kramco Sausage-o-Matic&trade;]);
 
 cli_execute('autoattack BasicProfChain');
 adv1($location[The Neverending Party], -1, '');
+cli_execute('autoattack 0');
+
+set_property('choiceAdventure1324', 1);
+set_property('choiceAdventure1325', 2);
+
+//Grab the Tomes of Opportunity
+adv1($location[The Neverending Party], -1, '');
+
+set_property('choiceAdventure1324', 5);
+equip($slot[off-hand], $item[familiar scrapbook]);
+
+cli_execute('bastille myst brutalist');
+use(1, $item[a ten-percent bonus]);
+
+cli_execute('autoattack BasicBackup');
+
+use_familiar($familiar[Melodramedary]);
+
+while(get_property('camelSpit').to_int() < 100)
+{
+	adv1($location[The Neverending Party], -1, '');
+}
+
+use_familiar($familiar[Shorter-Order Cook]);
+
+while(get_property('_backUpUses').to_int() < 11)
+{
+	adv1($location[The Neverending Party], -1, '');
+}
+
 cli_execute('autoattack 0');
 
 abort('unfinished');
@@ -205,3 +240,28 @@ while(get_property('camelSpit').to_int() < 100)
 }
 
 print('Exiting HP: ', 'purple');
+
+use_familiar($familiar[Melodramedary]);
+
+cli_execute('autoattack BasicBackup');
+
+while(get_property('camelSpit').to_int() < 100)
+{
+	adv1($location[The Neverending Party], -1, '');
+}
+
+use_familiar($familiar[Shorter-Order Cook]);
+
+while(get_property('_backUpUses').to_int() < 11)
+{
+	adv1($location[The Neverending Party], -1, '');
+}
+
+cli_execute('autoattack 0');
+
+string macro = 'skill curse of weaksauce; skill entangling noodles; skill micrometeorite; if hasskill bowl sideways skill bowl sideways endif;if hasskill feel pride skill feel pride endif; skill 7444; attack; repeat;';
+
+while(get_property('_neverendingPartyFreeTurns').to_int() < 10)
+{
+	adv1($location[The Neverending Party], -1, macro);
+}
