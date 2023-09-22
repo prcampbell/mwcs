@@ -232,34 +232,7 @@ while (get_property('timesRested').to_int() < total_free_rests())
     }
 }
 
-cli_execute('autoattack BasicBackup');
-
-while(get_property('camelSpit').to_int() < 100)
-{
-	adv1($location[The Neverending Party], -1, '');
-}
-
-print('Exiting HP: ', 'purple');
-
-use_familiar($familiar[Melodramedary]);
-
-cli_execute('autoattack BasicBackup');
-
-while(get_property('camelSpit').to_int() < 100)
-{
-	adv1($location[The Neverending Party], -1, '');
-}
-
-use_familiar($familiar[Shorter-Order Cook]);
-
-while(get_property('_backUpUses').to_int() < 11)
-{
-	adv1($location[The Neverending Party], -1, '');
-}
-
-cli_execute('autoattack 0');
-
-string macro = 'skill curse of weaksauce; skill entangling noodles; skill micrometeorite; if hasskill bowl sideways skill bowl sideways endif;if hasskill feel pride skill feel pride endif; skill 7444; attack; repeat;';
+//string macro = 'skill curse of weaksauce; skill entangling noodles; skill micrometeorite; if hasskill bowl sideways skill bowl sideways endif;if hasskill feel pride skill feel pride endif; skill 7444; attack; repeat;';
 
 while(get_property('_neverendingPartyFreeTurns').to_int() < 10)
 {
