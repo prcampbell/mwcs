@@ -34,7 +34,8 @@ if (have_effect($effect[That's Just Cloud-Talk, Man]) == 0) { //'
     visit_url('place.php?whichplace=campaway&action=campaway_sky');
 }
 
-if (!get_property('_lyleFavored').to_boolean()) {
+if (!get_property('_lyleFavored').to_boolean()) 
+{
     ensure_effect($effect[Favored by Lyle]);
 }
 ensure_effect($effect[Triple-Sized]);

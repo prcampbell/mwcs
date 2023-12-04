@@ -122,7 +122,7 @@ equip($slot[acc1], kgbBriefcase);
 equip($slot[acc2], $item[Powerful Glove]);
 equip($slot[acc3], $item[Retrospecs]);
 
-cli_execute('familiar exotic parrot; equip familiar tiny stillsuit; familiar obtuse angel; equip familiar miniature crystal ball;parka mp;');
+cli_execute('familiar gelatinous cubeling; equip familiar tiny stillsuit; familiar obtuse angel; equip familiar miniature crystal ball;parka mp;');
 
 // Buy toy accordion
 buy(1, $item[toy accordion]);
