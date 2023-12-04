@@ -60,16 +60,8 @@ if (my_level() == 1 && my_spleen_use() == 0) {
     }
 }
 
-if (get_property('_clanFortuneConsultUses').to_int() < 3) 
-{
-    cli_execute('/whitelist bonus adv');
-    while (get_property('_clanFortuneConsultUses').to_int() < 3) 
-    {
-        cli_execute('fortune cheesefax');
-        cli_execute('wait 5');
-    }
-}
-print('Done Fortunes', 'green');
+cli_execute('/whitelist bonus adv');
+
 
 cli_execute('swim item');
 

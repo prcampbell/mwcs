@@ -5,7 +5,7 @@ print('Entering HP: ', 'purple');
 cli_execute('familiar melodramedary; make box of familiar jacks; use box of familiar jacks; equip drinking helm');
 //buff up
 
-
+//Cheat Forest (remember to cast Giant Growth, then pull bag of tricks and open it)
 /*Mana-less stat buffs*/
 
 // Boxing Daycare
@@ -65,6 +65,7 @@ ensure_effect($effect[Antiphon of Aptitude]);
 /*
 Exp Buffs
     Witchess
+    mumming trunk Cromwell on Dromedary
 */
 
 item love_potion = $item[Love Potion #XYZ];
@@ -84,6 +85,9 @@ item love_potion = $item[Love Potion #XYZ];
 abort('unfinished');
 
 //macro = 'use curse of weaksauce;use micrometeorite;use detect weakness;use time-spinner;use entangling noodles;'
+
+//Set up for Combat (outfit)
+//Set up for Combat (familiar w correct equipment)
 //LOV tunnel (mainstat +exp, open heart surgery, chocolate) 
 
 //map a goblin flapper in
