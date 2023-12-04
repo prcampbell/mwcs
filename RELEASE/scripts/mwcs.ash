@@ -11,3 +11,5 @@ if (!test_done(TEST_COIL_WIRE))
 }
     
 print('MWCS Done', 'green');
+
+//mallstore.php?whichstore=
