@@ -1,8 +1,11 @@
 import "mwcslib.ash"
 print('Entering HP: ', 'purple');
 
+if(to_item("dromedary drinking helmet").available_amount() == 0)
+{
+    cli_execute('familiar melodramedary; make box of familiar jacks; use box of familiar jacks; equip drinking helm');
+}
 
-cli_execute('familiar melodramedary; make box of familiar jacks; use box of familiar jacks; equip drinking helm');
 //buff up
 
 //Cheat Forest (remember to cast Giant Growth, then pull bag of tricks and open it)
@@ -44,7 +47,8 @@ ensure_effect($effect[Confidence of the Votive]);
 ensure_effect($effect[Broad-Spectrum Vaccine]);
 ensure_effect($effect[Feeling Excited]);
 
-cli_execute('maximize mp; eat 1 magic sausage;');
+if(available_amount($item[magical sausage casing]) > 0)
+    cli_execute('maximize mp; eat 1 magic sausage;');
 
 //Myst Buffs
 ensure_effect($effect[Song of Bravado]);
@@ -60,7 +64,7 @@ ensure_effect($effect[Blood Bond]);
 ensure_effect($effect[Empathy]);
 ensure_effect($effect[Leash of Linguini]);
 ensure_effect($effect[Antiphon of Aptitude]);
-ensure_effect($effect[Ur-Kel's Aria of Annoyance]);
+ensure_effect($effect[Ur-Kel's Aria of Annoyance]); //'
 cli_execute('witchess');
 
 
@@ -168,6 +172,7 @@ while(my_mp() > mp_cost($skill[Summon Love Song]) && item_amount($item[love song
 
 if(get_property('_questPartyFair') == 'unstarted')
 {
+    set_property('choiceAdventure1322', 2);
     adv1($location[The Neverending Party], -1, '');
 }
 
