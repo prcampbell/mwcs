@@ -14,22 +14,6 @@ int TEST_COIL_WIRE = 11;
 
 /*Helper Functions*/
 
-familiar chooseFamiliar()
-{
-    if(available_amount($item[burning newspaper]) == 0 && !test_done(TEST_FAMILIAR))
-    {
-        return $familiar[garbage fire];
-    }
-    if(get_property('camelSpit').to_int() < 100)
-        return $familiar[Melodramedary];
-    if(available_amount($item[short stack of pancakes]) == 0 && !test_done(TEST_FAMILIAR))
-        return $familiar[Shorter-Order Cook];
-    if(available_amount($item[tiny bottle of absinthe]) == 0 && !test_done(TEST_FAMILIAR))
-    {
-        return $familiar[green pixie];
-    }
-}
-
 void error(string message) {
     // Clean up saved properties.
     //set_property('autoSatisfyWithNPCs', get_property('_saved_autoSatisfyWithNPCs'));
@@ -118,4 +102,21 @@ void ensure_song(effect ef) {
     } else {
         print('Already have effect ' + ef.name + '.');
     }
+}
+
+familiar chooseFamiliar()
+{
+    if(available_amount($item[burning newspaper]) == 0 && !test_done(TEST_FAMILIAR))
+    {
+        return $familiar[garbage fire];
+    }
+    if(get_property('camelSpit').to_int() < 100)
+        return $familiar[Melodramedary];
+    if(available_amount($item[short stack of pancakes]) == 0 && !test_done(TEST_FAMILIAR))
+        return $familiar[Shorter-Order Cook];
+    if(available_amount($item[tiny bottle of absinthe]) == 0 && !test_done(TEST_FAMILIAR))
+    {
+        return $familiar[green pixie];
+    }
+    return $familiar[cookbookbat];
 }

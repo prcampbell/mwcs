@@ -63,7 +63,7 @@ ensure_effect($effect[Carol of the Thrills]);
 ensure_effect($effect[Blood Bond]);
 ensure_effect($effect[Empathy]);
 ensure_effect($effect[Leash of Linguini]);
-ensure_effect($effect[Antiphon of Aptitude]);
+ensure_effect($effect[Aloysius' Antiphon of Aptitude]); //'
 ensure_effect($effect[Ur-Kel's Aria of Annoyance]); //'
 cli_execute('witchess');
 
@@ -209,7 +209,7 @@ cli_execute('autoattack csLeveling');
 // 	adv1($location[The Neverending Party], -1, '');
 // }
 
-while (get_property_int('_neverendingPartyFreeTurns') < 10 && get_property('_questPartyFair') != 'finished')
+while (get_property('_neverendingPartyFreeTurns').to_int() < 10 && get_property('_questPartyFair') != 'finished')
 {
     use_familiar(chooseFamiliar());
 	adv1($location[The Neverending Party], -1, macro);
