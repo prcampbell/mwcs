@@ -36,21 +36,33 @@ cli_execute('mood apathetic');
 cli_execute('backupcamera reverser on');
 
 //rent a dark horse
-cli_execute('horsery dark');
+if(get_property('_horsery') != 'dark horse')
+    cli_execute('horsery dark');
 
 // Upgrade Saber to Familiar weight
-visit_url('main.php?action=may4');
-run_choice(4);
+if(get_property('_saberMod').to_int() == 0)
+{
+    visit_url('main.php?action=may4');
+    run_choice(4);    
+}
+
 
 // Vote.
-visit_url('place.php?whichplace=town_right&action=townright_vote');
-visit_url('choice.php?option=1&whichchoice=1331&g=2&local%5B%5D=2&local%5B%5D=3');
+if(to_item("&quot;I Voted!&quot; sticker").available_amount() == 0)
+{
+    visit_url('place.php?whichplace=town_right&action=townright_vote');
+    visit_url('choice.php?option=1&whichchoice=1331&g=2&local%5B%5D=2&local%5B%5D=3');    
+}
+
 cli_execute('retrocape heck thrill');
 
 //Summon Borrowed Time
-create(1, $item[borrowed time]);
+if(!get_property('_borrowedTimeUsed').to_boolean())
+{
+    create(1, $item[borrowed time]);
+    use(1, $item[borrowed time]);    
+}
 
-use(1, $item[borrowed time]);
 
 //Get some adventures
 if (my_level() == 1 && my_spleen_use() == 0) {
@@ -60,16 +72,8 @@ if (my_level() == 1 && my_spleen_use() == 0) {
     }
 }
 
-if (get_property('_clanFortuneConsultUses').to_int() < 3) 
-{
-    cli_execute('/whitelist bonus adv');
-    while (get_property('_clanFortuneConsultUses').to_int() < 3) 
-    {
-        cli_execute('fortune cheesefax');
-        cli_execute('wait 5');
-    }
-}
-print('Done Fortunes', 'green');
+cli_execute('/whitelist bonus adv');
+
 
 cli_execute('swim item');
 
@@ -118,7 +122,7 @@ equip($slot[acc1], kgbBriefcase);
 equip($slot[acc2], $item[Powerful Glove]);
 equip($slot[acc3], $item[Retrospecs]);
 
-cli_execute('familiar exotic parrot; equip familiar tiny stillsuit; familiar obtuse angel; equip familiar miniature crystal ball;parka mp;');
+cli_execute('familiar gelatinous cubeling; equip familiar tiny stillsuit; familiar obtuse angel; equip familiar miniature crystal ball;parka mp;');
 
 // Buy toy accordion
 buy(1, $item[toy accordion]);
