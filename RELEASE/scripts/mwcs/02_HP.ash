@@ -182,20 +182,23 @@ equip($slot[off-hand], $item[familiar scrapbook]);
 cli_execute('bastille myst brutalist');
 use(1, $item[a ten-percent bonus]);
 
-cli_execute('autoattack BasicBackup');
+cli_execute('autoattack csLeveling');
 
-use_familiar($familiar[Melodramedary]);
+// while(get_property('camelSpit').to_int() < 100)
+// {
+// 	adv1($location[The Neverending Party], -1, '');
+// }
 
-while(get_property('camelSpit').to_int() < 100)
+// while(get_property('_backUpUses').to_int() < 11)
+// {
+//     use_familiar(chooseFamiliar());
+// 	adv1($location[The Neverending Party], -1, '');
+// }
+
+while (get_property_int('_neverendingPartyFreeTurns') < 10 && get_property('_questPartyFair') != 'finished')
 {
-	adv1($location[The Neverending Party], -1, '');
-}
-
-use_familiar($familiar[Shorter-Order Cook]);
-
-while(get_property('_backUpUses').to_int() < 11)
-{
-	adv1($location[The Neverending Party], -1, '');
+    use_familiar(chooseFamiliar());
+	adv1($location[The Neverending Party], -1, macro);
 }
 
 cli_execute('autoattack 0');
