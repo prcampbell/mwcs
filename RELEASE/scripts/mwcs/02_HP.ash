@@ -208,7 +208,8 @@ cli_execute('autoattack csLeveling');
 //     use_familiar(chooseFamiliar());
 // 	adv1($location[The Neverending Party], -1, '');
 // }
-
+equip($slot[acc2], $item[cincho de mayo]);
+ensure_effect($effect[Party Soundtrack]);
 while (get_property('_neverendingPartyFreeTurns').to_int() < 10 && get_property('_questPartyFair') != 'finished')
 {
     use_familiar(chooseFamiliar());
