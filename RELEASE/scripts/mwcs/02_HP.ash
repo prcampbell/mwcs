@@ -218,6 +218,19 @@ while (get_property('_neverendingPartyFreeTurns').to_int() < 10 && get_property(
 
 cli_execute('autoattack 0');
 
+while (get_property('timesRested').to_int() < total_free_rests()) 
+{
+    visit_url('place.php?whichplace=chateau&action=chateau_restbox');
+    while(my_mp() > mp_cost($skill[Summon Love Song]) && item_amount($item[love song of icy revenge]) < 4)
+    {
+        use_skill(1, $skill[Summon Love Song]);
+    }
+    while(my_mp() > mp_cost($skill[Summon Love Song]) && item_amount($item[pulled blue taffy]) < 5)
+    {
+        use_skill(1, $skill[Summon taffy]);
+    }
+}
+
 abort('unfinished');
 
 // use entangling noodles; use saucy salve; use lecture on relativity; use saucegeyser; repeat;
@@ -236,19 +249,6 @@ abort('unfinished');
 //Witchess Queen
 
 //Machine Tunnels for Certainty and Joy
-
-while (get_property('timesRested').to_int() < total_free_rests()) 
-{
-    visit_url('place.php?whichplace=chateau&action=chateau_restbox');
-    while(my_mp() > mp_cost($skill[Summon Love Song]) && item_amount($item[love song of icy revenge]) < 4)
-    {
-        use_skill(1, $skill[Summon Love Song]);
-    }
-    while(my_mp() > mp_cost($skill[Summon Love Song]) && item_amount($item[pulled blue taffy]) < 5)
-    {
-        use_skill(1, $skill[Summon taffy]);
-    }
-}
 
 //string macro = 'skill curse of weaksauce; skill entangling noodles; skill micrometeorite; if hasskill bowl sideways skill bowl sideways endif;if hasskill feel pride skill feel pride endif; skill 7444; attack; repeat;';
 
